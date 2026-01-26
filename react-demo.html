@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Demo</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        #root {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .demo-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .demo-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .counter-display {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        input {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .greeting {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.3em;
+            margin-top: 15px;
+        }
+        
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .todo-item.completed {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+        
+        .todo-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        
+        .todo-item span {
+            flex: 1;
+        }
+        
+        .todo-item button {
+            padding: 8px 15px;
+            background: #e74c3c;
+            font-size: 0.9em;
+        }
+        
+        .todo-item button:hover {
+            background: #c0392b;
+        }
+        
+        .add-todo {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .add-todo input {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState } = React;
+        
+        // Komponentti 1: Yksinkertainen laskuri
+        function Counter() {
+            const [count, setCount] = useState(0);
+            
+            return (
+                <div className="demo-section">
+                    <h2>🔢 Laskuri (useState hook)</h2>
+                    <p>Tämä näyttää Reactin tilan (state) hallinnan perusidean.</p>
+                    <div className="counter-display">{count}</div>
+                    <button onClick={() => setCount(count + 1)}>➕ Lisää</button>
+                    <button onClick={() => setCount(count - 1)}>➖ Vähennä</button>
+                    <button onClick={() => setCount(0)}>🔄 Nollaa</button>
+                </div>
+            );
+        }
+        
+        // Komponentti 2: Tervehdys-lomake
+        function Greeting() {
+            const [name, setName] = useState('');
+            
+            return (
+                <div className="demo-section">
+                    <h2>👋 Tervehdys (Controlled Input)</h2>
+                    <p>Kirjoita nimesi ja katso miten React päivittää käyttöliittymän automaattisesti.</p>
+                    <input 
+                        type="text" 
+                        placeholder="Kirjoita nimesi tähän..."
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    {name && (
+                        <div className="greeting">
+                            Hei, {name}! 👋 Tervetuloa Reactin maailmaan!
+                        </div>
+                    )}
+                </div>
+            );
+        }
+        
+        // Komponentti 3: Todo-lista
+        function TodoList() {
+            const [todos, setTodos] = useState([
+                { id: 1, text: 'Opi React', completed: false },
+                { id: 2, text: 'Rakenna hieno sovellus', completed: false }
+            ]);
+            const [newTodo, setNewTodo] = useState('');
+            
+            const addTodo = () => {
+                if (newTodo.trim()) {
+                    setTodos([...todos, { 
+                        id: Date.now(), 
+                        text: newTodo, 
+                        completed: false 
+                    }]);
+                    setNewTodo('');
+                }
+            };
+            
+            const toggleTodo = (id) => {
+                setTodos(todos.map(todo => 
+                    todo.id === id ? { ...todo, completed: !todo.completed } : todo
+                ));
+            };
+            
+            const deleteTodo = (id) => {
+                setTodos(todos.filter(todo => todo.id !== id));
+            };
+            
+            return (
+                <div className="demo-section">
+                    <h2>✅ Todo-lista (Lists & Events)</h2>
+                    <p>Tämä näyttää miten React käsittelee listoja ja tapahtumia.</p>
+                    <div className="add-todo">
+                        <input 
+                            type="text"
+                            placeholder="Lisää uusi tehtävä..."
+                            value={newTodo}
+                            onChange={(e) => setNewTodo(e.target.value)}
+                            onKeyPress={(e) => e.key === 'Enter' && addTodo()}
+                        />
+                        <button onClick={addTodo}>Lisää</button>
+                    </div>
+                    {todos.map(todo => (
+                        <div key={todo.id} className={`todo-item ${todo.completed ? 'completed' : ''}`}>
+                            <input 
+                                type="checkbox"
+                                checked={todo.completed}
+                                onChange={() => toggleTodo(todo.id)}
+                            />
+                            <span>{todo.text}</span>
+                            <button onClick={() => deleteTodo(todo.id)}>Poista</button>
+                        </div>
+                    ))}
+                </div>
+            );
+        }
+        
+        // Pääkomponentti
+        function App() {
+            return (
+                <div className="container">
+                    <h1>⚛️ React Demo</h1>
+                    <p className="subtitle">Tutustu Reactin perusominaisuuksiin interaktiivisten esimerkkien avulla!</p>
+                    
+                    <Counter />
+                    <Greeting />
+                    <TodoList />
+                </div>
+            );
+        }
+        
+        // Renderöi sovellus
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
