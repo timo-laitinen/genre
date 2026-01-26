@@ -245,17 +245,57 @@
             border-bottom: 1px solid #ffffff;
             padding: 2px 5px;
             font-size: 10pt;
+            position: relative;
         }
         
         .menu-item {
             display: inline-block;
             padding: 2px 8px;
             cursor: pointer;
+            position: relative;
         }
         
         .menu-item:hover {
             background-color: #000080;
             color: #ffffff;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #c0c0c0;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+            min-width: 200px;
+            z-index: 1000;
+            box-shadow: 2px 2px 0px #808080;
+        }
+        
+        .menu-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown-item {
+            padding: 4px 20px;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #000080;
+            color: #ffffff;
+        }
+        
+        .dropdown-separator {
+            height: 1px;
+            background: linear-gradient(to bottom, #808080, #ffffff);
+            margin: 2px 0;
         }
         
         .blink {
@@ -284,7 +324,15 @@
         </div>
         
         <div class="menu-bar">
-            <span class="menu-item"><u>F</u>ile</span>
+            <span class="menu-item">
+                <u>F</u>ile
+                <div class="dropdown">
+                    <a href="home-art-studio.html" class="dropdown-item">Home Art Studio®</a>
+                    <a href="win95-backgrounds.html" class="dropdown-item">Windows 95 Backgrounds</a>
+                    <div class="dropdown-separator"></div>
+                    <span class="dropdown-item" style="color: #808080;">Exit</span>
+                </div>
+            </span>
             <span class="menu-item"><u>E</u>dit</span>
             <span class="menu-item"><u>V</u>iew</span>
             <span class="menu-item"><u>H</u>elp</span>
