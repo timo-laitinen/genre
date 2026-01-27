@@ -13,13 +13,13 @@
 
         body {
             background-color: #008080;
-            background-image: 
-                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px);
+            background-image:
+                    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px);
             font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
             padding: 10px;
             color: #000000;
         }
-        
+
         .window {
             background-color: #c0c0c0;
             border-top: 2px solid #ffffff;
@@ -29,7 +29,7 @@
             box-shadow: 2px 2px 0px #808080;
             margin-bottom: 10px;
         }
-        
+
         .title-bar {
             background: linear-gradient(to right, #000080, #1084d0);
             color: #ffffff;
@@ -40,18 +40,18 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .title-bar-text {
             display: flex;
             align-items: center;
             gap: 5px;
         }
-        
+
         .title-bar-controls {
             display: flex;
             gap: 2px;
         }
-        
+
         .title-bar-button {
             width: 16px;
             height: 14px;
@@ -70,14 +70,14 @@
             line-height: 1;
             padding-bottom: 2px;
         }
-        
+
         .title-bar-button:active {
             border-top: 1px solid #000000;
             border-left: 1px solid #000000;
             border-right: 1px solid #ffffff;
             border-bottom: 1px solid #ffffff;
         }
-        
+
         .minimize-button::before {
             content: "";
             width: 6px;
@@ -86,7 +86,7 @@
             display: block;
             margin-bottom: 3px;
         }
-        
+
         .maximize-button::before {
             content: "";
             width: 8px;
@@ -95,53 +95,53 @@
             border-top: 2px solid #000000;
             display: block;
         }
-        
+
         .close-button {
             font-size: 9pt;
             font-weight: bold;
             color: #000000;
         }
-        
+
         .window-content {
             padding: 10px;
             background-color: #c0c0c0;
         }
-        
+
         h1 {
             font-size: 14pt;
             font-weight: bold;
             margin-bottom: 8px;
             color: #000080;
         }
-        
+
         h2 {
             font-size: 12pt;
             font-weight: bold;
             margin: 12px 0 6px 0;
             color: #000080;
         }
-        
+
         h3 {
             font-size: 11pt;
             font-weight: bold;
             margin: 8px 0 4px 0;
         }
-        
+
         p {
             font-size: 10pt;
             line-height: 1.5;
             margin-bottom: 8px;
         }
-        
+
         a {
             color: #0000ff;
             text-decoration: underline;
         }
-        
+
         a:visited {
             color: #800080;
         }
-        
+
         .panel {
             background-color: #c0c0c0;
             border-top: 1px solid #808080;
@@ -151,7 +151,7 @@
             padding: 10px;
             margin: 10px 0;
         }
-        
+
         .panel-raised {
             border-top: 2px solid #ffffff;
             border-left: 2px solid #ffffff;
@@ -160,25 +160,25 @@
             padding: 8px;
             margin: 8px 0;
         }
-        
+
         ul {
             list-style-type: none;
             margin-left: 0;
         }
-        
+
         li {
             padding: 4px 0;
             font-size: 10pt;
             padding-left: 20px;
             position: relative;
         }
-        
+
         li:before {
             content: "▪";
             position: absolute;
             left: 5px;
         }
-        
+
         .button {
             background-color: #c0c0c0;
             border-top: 2px solid #ffffff;
@@ -191,7 +191,7 @@
             display: inline-block;
             margin: 4px 2px;
         }
-        
+
         .button:active {
             border-top: 2px solid #000000;
             border-left: 2px solid #000000;
@@ -199,7 +199,7 @@
             border-bottom: 2px solid #ffffff;
             padding: 5px 11px 3px 13px;
         }
-        
+
         .status-bar {
             border-top: 1px solid #ffffff;
             padding: 2px 5px;
@@ -208,7 +208,7 @@
             display: flex;
             gap: 10px;
         }
-        
+
         .status-item {
             border-top: 1px solid #808080;
             border-left: 1px solid #808080;
@@ -216,30 +216,30 @@
             border-bottom: 1px solid #ffffff;
             padding: 2px 8px;
         }
-        
+
         .separator {
             height: 2px;
             background: linear-gradient(to bottom, #808080, #ffffff);
             margin: 10px 0;
         }
-        
+
         .new {
             color: #ff0000;
             font-weight: bold;
         }
-        
+
         code {
             font-family: "Courier New", monospace;
             background-color: #ffffff;
             padding: 2px 4px;
             border: 1px solid #808080;
         }
-        
+
         .icon {
             display: inline-block;
             margin-right: 5px;
         }
-        
+
         .menu-bar {
             background-color: #c0c0c0;
             border-bottom: 1px solid #ffffff;
@@ -247,19 +247,19 @@
             font-size: 10pt;
             position: relative;
         }
-        
+
         .menu-item {
             display: inline-block;
             padding: 2px 8px;
             cursor: pointer;
             position: relative;
         }
-        
+
         .menu-item:hover {
             background-color: #000080;
             color: #ffffff;
         }
-        
+
         .dropdown {
             display: none;
             position: absolute;
@@ -274,11 +274,11 @@
             z-index: 1000;
             box-shadow: 2px 2px 0px #808080;
         }
-        
+
         .menu-item:hover .dropdown {
             display: block;
         }
-        
+
         .dropdown-item {
             padding: 4px 20px;
             cursor: pointer;
@@ -286,22 +286,22 @@
             text-decoration: none;
             color: #000000;
         }
-        
+
         .dropdown-item:hover {
             background-color: #000080;
             color: #ffffff;
         }
-        
+
         .dropdown-separator {
             height: 1px;
             background: linear-gradient(to bottom, #808080, #ffffff);
             margin: 2px 0;
         }
-        
+
         .blink {
             animation: blink 1s infinite;
         }
-        
+
         @keyframes blink {
             0%, 49% { opacity: 1; }
             50%, 100% { opacity: 0; }
@@ -309,76 +309,60 @@
     </style>
 </head>
 <body>
-    <!-- Main Application Window -->
-    <div class="window" style="max-width: 800px; margin: 20px auto;">
-        <div class="title-bar">
-            <div class="title-bar-text">
-                <span>📁</span>
-                <span>Genre - Frontend Playground</span>
-            </div>
-            <div class="title-bar-controls">
-                <div class="title-bar-button minimize-button"></div>
-                <div class="title-bar-button maximize-button"></div>
-                <div class="title-bar-button close-button">✕</div>
-            </div>
+<!-- Main Application Window -->
+<div class="window" style="max-width: 800px; margin: 20px auto;">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            <span>📁</span>
+            <span>Genre - Frontend Playground</span>
         </div>
-        
-        <div class="menu-bar">
-            <span class="menu-item">
-                <u>F</u>ile
-                <div class="dropdown">
-                    <a href="home-art-studio.html" class="dropdown-item">Home Art Studio®</a>
-                    <a href="win95-backgrounds.html" class="dropdown-item">Windows 95 Backgrounds</a>
-                    <div class="dropdown-separator"></div>
-                    <span class="dropdown-item" style="color: #808080;">Exit</span>
-                </div>
-            </span>
-            <span class="menu-item"><u>E</u>dit</span>
-            <span class="menu-item"><u>V</u>iew</span>
-            <span class="menu-item"><u>H</u>elp</span>
-        </div>
-        
-        <div class="window-content">
-            <h2>ℹ️ Järjestelmätiedot</h2>
-            <div class="panel">
-                <p><b>Hosting:</b> GitHub Pages</p>
-                <p><b>Repository:</b> <code>timo-laitinen/genre</code></p>
-                <p><b>URL:</b> <code>https://timo-laitinen.github.io/genre/</code></p>
-            </div>
-
-            <div style="text-align: center; margin: 30px 0;">
-                <img src="glitch-animation.gif" alt="Glitch Animation" style="max-width: 100%; height: auto; border: 2px solid #808080;">
-            </div>
-        </div>
-        
-        <div class="status-bar">
-            <div class="status-item">Ready</div>
-            <div class="status-item">NUM</div>
-            <div class="status-item"><script>document.write(new Date().toLocaleTimeString('fi-FI'));</script></div>
+        <div class="title-bar-controls">
+            <div class="title-bar-button minimize-button"></div>
+            <div class="title-bar-button maximize-button"></div>
+            <div class="title-bar-button close-button">✕</div>
         </div>
     </div>
 
-    <script>
-        // Easter egg: Konami code
-        let konamiCode = [];
-        const pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-        
-        document.addEventListener('keydown', (e) => {
-            konamiCode.push(e.key);
-            konamiCode = konamiCode.slice(-10);
-            
-            if (konamiCode.join('') === pattern.join('')) {
-                alert('🎮 Konami Code aktivoitu! Windows 3.1 nostalgia level MAX! 🎮\n\nNow featuring enhanced Win 3.1 graphics!');
-            }
-        });
+    <div class="menu-bar">
+    <span class="menu-item">
+        <u>F</u>ile
+        <div class="dropdown">
+            <a href="pages/intro-flash.html" class="dropdown-item">Intro Flash</a>
+            <a href="pages/home-art-studio.html" class="dropdown-item">Home Art Studio®</a>
+            <a href="pages/win95-backgrounds.html" class="dropdown-item">Windows 95 Backgrounds</a>
+            <div class="dropdown-separator"></div>
+            <span class="dropdown-item" style="color: #808080;">Exit</span>
+        </div>
+    </span>
+        <span class="menu-item"><u>E</u>dit</span>
+        <span class="menu-item"><u>V</u>iew</span>
+        <span class="menu-item"><u>H</u>elp</span>
+    </div>
 
-        // Update clock every second
-        setInterval(() => {
-            const timeElements = document.querySelectorAll('.status-bar .status-item:last-child');
-            timeElements.forEach(el => {
-                el.textContent = new Date().toLocaleTimeString('fi-FI');
-            });
-        }, 1000);
-    </script>
+    <div class="window-content">
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="glitch-animation.gif" alt="Glitch Animation" style="max-width: 100%; height: auto; border: 2px solid #808080;">
+        </div>
+    </div>
+
+    <div class="status-bar" style="flex-wrap: wrap;">
+        <div class="status-item">Ready</div>
+        <div class="status-item">NUM</div>
+        <div class="status-item" id="clock"><script>document.write(new Date().toLocaleTimeString('fi-FI'));</script></div>
+        <div class="status-item" style="flex: 1;">GitHub Pages</div>
+        <div class="status-item" style="flex: 1;">timo-laitinen/genre</div>
+    </div>
+
+</div>
+
+<script>
+    // Update clock every second
+    setInterval(() => {
+        const clockElement = document.getElementById('clock');
+        if (clockElement) {
+            clockElement.textContent = new Date().toLocaleTimeString('fi-FI');
+        }
+    }, 1000);
+</script>
 </body>
 </html>

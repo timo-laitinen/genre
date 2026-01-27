@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Flash - Genre</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 2px solid #808080;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            color: #00ffff;
+            text-decoration: none;
+            font-size: 12pt;
+            padding: 10px 20px;
+            border: 2px solid #808080;
+            display: inline-block;
+            background-color: #1a1a1a;
+        }
+
+        .back-link a:hover {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="video-container">
+    <video autoplay loop muted playsinline>
+        <source src="../video/sunset-birds.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="back-link">
+        <a href="../index.html">← Back to Home</a>
+    </div>
+</div>
+</body>
+</html>

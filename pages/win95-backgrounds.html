@@ -13,13 +13,13 @@
 
         body {
             background-color: #008080;
-            background-image: 
-                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px);
+            background-image:
+                    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px);
             font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
             padding: 10px;
             color: #000000;
         }
-        
+
         .window {
             background-color: #c0c0c0;
             border-top: 2px solid #ffffff;
@@ -29,7 +29,7 @@
             box-shadow: 2px 2px 0px #808080;
             margin-bottom: 10px;
         }
-        
+
         .title-bar {
             background: linear-gradient(to right, #000080, #1084d0);
             color: #ffffff;
@@ -40,18 +40,18 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .title-bar-text {
             display: flex;
             align-items: center;
             gap: 5px;
         }
-        
+
         .title-bar-controls {
             display: flex;
             gap: 2px;
         }
-        
+
         .title-bar-button {
             width: 16px;
             height: 14px;
@@ -70,14 +70,14 @@
             line-height: 1;
             padding-bottom: 2px;
         }
-        
+
         .title-bar-button:active {
             border-top: 1px solid #000000;
             border-left: 1px solid #000000;
             border-right: 1px solid #ffffff;
             border-bottom: 1px solid #ffffff;
         }
-        
+
         .minimize-button::before {
             content: "";
             width: 6px;
@@ -86,7 +86,7 @@
             display: block;
             margin-bottom: 3px;
         }
-        
+
         .maximize-button::before {
             content: "";
             width: 8px;
@@ -95,47 +95,47 @@
             border-top: 2px solid #000000;
             display: block;
         }
-        
+
         .close-button {
             font-size: 9pt;
             font-weight: bold;
             color: #000000;
         }
-        
+
         .window-content {
             padding: 10px;
             background-color: #c0c0c0;
         }
-        
+
         h1 {
             font-size: 14pt;
             font-weight: bold;
             margin-bottom: 8px;
             color: #000080;
         }
-        
+
         h2 {
             font-size: 12pt;
             font-weight: bold;
             margin: 12px 0 6px 0;
             color: #000080;
         }
-        
+
         p {
             font-size: 10pt;
             line-height: 1.5;
             margin-bottom: 8px;
         }
-        
+
         a {
             color: #0000ff;
             text-decoration: underline;
         }
-        
+
         a:visited {
             color: #800080;
         }
-        
+
         .panel {
             background-color: #c0c0c0;
             border-top: 1px solid #808080;
@@ -145,7 +145,7 @@
             padding: 10px;
             margin: 10px 0;
         }
-        
+
         .panel-raised {
             border-top: 2px solid #ffffff;
             border-left: 2px solid #ffffff;
@@ -154,7 +154,7 @@
             padding: 8px;
             margin: 8px 0;
         }
-        
+
         .status-bar {
             border-top: 1px solid #ffffff;
             padding: 2px 5px;
@@ -163,7 +163,7 @@
             display: flex;
             gap: 10px;
         }
-        
+
         .status-item {
             border-top: 1px solid #808080;
             border-left: 1px solid #808080;
@@ -171,12 +171,12 @@
             border-bottom: 1px solid #ffffff;
             padding: 2px 8px;
         }
-        
+
         .preview-container {
             text-align: center;
             margin: 20px 0;
         }
-        
+
         .preview-window {
             display: inline-block;
             background-color: #000000;
@@ -186,17 +186,17 @@
             border-right: 2px solid #000000;
             border-bottom: 2px solid #000000;
         }
-        
+
         .preview-window img {
             display: block;
             max-width: 100%;
             height: auto;
         }
-        
+
         .info-panel {
             margin-top: 15px;
         }
-        
+
         code {
             font-family: "Courier New", monospace;
             background-color: #ffffff;
@@ -206,65 +206,57 @@
     </style>
 </head>
 <body>
-    <div class="window" style="max-width: 900px; margin: 20px auto;">
-        <div class="title-bar">
-            <div class="title-bar-text">
-                <span>🖼️</span>
-                <span>Windows 95 Backgrounds</span>
-            </div>
-            <div class="title-bar-controls">
-                <div class="title-bar-button minimize-button"></div>
-                <div class="title-bar-button maximize-button"></div>
-                <div class="title-bar-button close-button">✕</div>
-            </div>
+<div class="window" style="max-width: 900px; margin: 20px auto;">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            <span>🖼️</span>
+            <span>Windows 95 Backgrounds</span>
         </div>
-        
-        <div class="window-content">
-            <div class="panel-raised">
-                <h1>🌄 Windows 95 Backgrounds</h1>
-                <p><b>Classic Desktop Wallpapers</b></p>
-                <p>Nostalgic backgrounds inspired by the golden age of desktop computing.</p>
-            </div>
-
-            <h2>Featured Background</h2>
-            
-            <div class="preview-container">
-                <div class="preview-window">
-                    <img src="glitch-background.png" alt="Glitch Mountain Landscape">
-                </div>
-            </div>
-
-            <div class="panel info-panel">
-                <h2>File Information</h2>
-                <p><b>Filename:</b> <code>GLITCH_MOUNTAIN.PNG</code></p>
-                <p><b>Description:</b> Glitch-enhanced landscape with mountain and lake scenery</p>
-                <p><b>Style:</b> Retro digital corruption aesthetic</p>
-                <p><b>Resolution:</b> High quality for modern displays</p>
-            </div>
-
-            <div class="panel" style="background-color: #ffffcc; border: 2px solid #808080;">
-                <p><b>💡 Tip:</b> Right-click the image above to save it to your computer and use it as your desktop background!</p>
-            </div>
-
-            <p style="text-align: center; margin-top: 20px;">
-                <a href="index.html">← Back to Home</a>
-            </p>
-        </div>
-        
-        <div class="status-bar">
-            <div class="status-item">1 image</div>
-            <div class="status-item">Ready</div>
-            <div class="status-item"><script>document.write(new Date().toLocaleTimeString('fi-FI'));</script></div>
+        <div class="title-bar-controls">
+            <div class="title-bar-button minimize-button"></div>
+            <div class="title-bar-button maximize-button"></div>
+            <div class="title-bar-button close-button">✕</div>
         </div>
     </div>
 
-    <script>
-        setInterval(() => {
-            const timeElements = document.querySelectorAll('.status-bar .status-item:last-child');
-            timeElements.forEach(el => {
-                el.textContent = new Date().toLocaleTimeString('fi-FI');
-            });
-        }, 1000);
-    </script>
+    <div class="window-content">
+        <div class="panel-raised">
+            <h1>🌄 Windows 95 Backgrounds</h1>
+        </div>
+
+        <h2>Featured Background</h2>
+
+        <div class="preview-container">
+            <div class="preview-window">
+                <img src="../images/glitch-background.png" alt="Glitch Mountain Landscape">
+            </div>
+        </div>
+
+
+
+        <div class="panel" style="background-color: #ffffcc; border: 2px solid #808080;">
+            <p><b>💡 Tip:</b> Right-click the image above to save it to your computer and use it as your desktop background!</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="../index.html">← Back to Home</a>
+        </p>
+    </div>
+
+    <div class="status-bar">
+        <div class="status-item">1 image</div>
+        <div class="status-item">Ready</div>
+        <div class="status-item" id="clock"><script>document.write(new Date().toLocaleTimeString('fi-FI'));</script></div>
+    </div>
+</div>
+
+<script>
+    setInterval(() => {
+        const clockElement = document.getElementById('clock');
+        if (clockElement) {
+            clockElement.textContent = new Date().toLocaleTimeString('fi-FI');
+        }
+    }, 1000);
+</script>
 </body>
 </html>
