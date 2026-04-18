@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro Flash - Genre</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -14,56 +20,101 @@
         body {
             background-color: #000000;
             font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+            overflow: hidden;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Video taustalla */
+        .video-background {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        /* Tumma overlay videon päällä (valinnainen) */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        /* Sisältö videon päällä */
+        .content {
+            position: relative;
+            z-index: 1;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             color: #ffffff;
-        }
-
-        .video-container {
-            width: 100%;
-            max-width: 1200px;
+            text-align: center;
             padding: 20px;
         }
 
-        video {
-            width: 100%;
-            height: auto;
-            display: block;
-            border: 2px solid #808080;
+        h1 {
+            font-family: 'Rubik Wet Paint', system-ui;
+            font-size: 96pt;
+            font-weight: normal;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
+            color: #ffffff;
         }
 
-        .back-link {
-            text-align: center;
-            margin-top: 20px;
+        p {
+            font-size: 24pt;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 40px;
         }
 
         .back-link a {
-            color: #00ffff;
+            color: #ff6600;
             text-decoration: none;
-            font-size: 12pt;
-            padding: 10px 20px;
-            border: 2px solid #808080;
+            font-size: 14pt;
+            padding: 15px 30px;
+            border: 2px solid #ff6600;
             display: inline-block;
-            background-color: #1a1a1a;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            transition: all 0.3s;
         }
 
         .back-link a:hover {
-            background-color: #333333;
+            background-color: #ff6600;
             color: #ffffff;
+            text-shadow: none;
         }
     </style>
 </head>
 <body>
-<div class="video-container">
-    <video autoplay loop muted playsinline>
-        <source src="../video/sunset-birds.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<!-- Video taustalla -->
+<video class="video-background" autoplay loop muted playsinline>
+    <source src="../video/sunset-birds.mp4" type="video/mp4">
+</video>
+
+<!-- Tumma overlay (valinnainen - poista jos haluat kirkkaampaa) -->
+<div class="overlay"></div>
+
+<!-- Sisältö videon päällä -->
+<div class="content">
+    <h1>GENRE</h1>
+    <p>Frontend Playground</p>
 
     <div class="back-link">
-        <a href="../index.html">← Back to Home</a>
+        <a href="../index.html">← Enter</a>
     </div>
 </div>
 </body>
